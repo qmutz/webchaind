@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.23rc2
 
 ENV SHELL /bin/bash
 ENV HOME /root
