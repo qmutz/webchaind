@@ -12,7 +12,7 @@ WORKDIR /go/src/github.com/webchain-network/webchaind
 RUN make cmd/webchaind
 
 # Pull webchaind into a second stage deploy alpine container
-FROM alpine:latest
+FROM alpine:3.20.3
 
 RUN apk add --no-cache ca-certificates rust-stdlib
 COPY --from=builder /go/src/github.com/webchain-network/webchaind/bin/webchaind /usr/sbin/
